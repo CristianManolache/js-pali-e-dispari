@@ -3,7 +3,7 @@
 // (Quindi classico gioco pari o dispari dove utente sceglie a priori se uscirà pari o dipsari e poi dichiara un numero (tra 1 e 5) . Il computer genera random altro numero sullo stesso range, così sapremo chi ha vinto.
 
 // Chiediamo al utente di inserire pari o dispari e un numero da 1 a 5 come INPUT
-var choose = prompt("Ciao,pari o dispari?")
+var choose = prompt("Ciao,Pari o Dispari?")
 console.log("Hai scelto " + choose);
 var choosenum = parseInt(prompt("Ciao,scegli anche un numero da 1 a 5"))
 console.log("Hai scelto il numero " + choosenum);
@@ -14,4 +14,11 @@ console.log("Il computer ha scelto " + sceltawordcomputer);
 // Generiamo un numero random (sempre da 1 a 5) per il computer
 var computerNr = Math.floor(Math.random() * 5) + 1;
 console.log("Il computer ha scelto il numero " + computerNr);
+// Calcolo la somma dei numeri dell utente + computer
+var somma = choosenum + computerNr;
 // Output finale vincitore
+if (choose === wordcomputer[0] && somma % 2 === 0) {
+  console.log("Il vincitore e l'utente!");
+} else {
+  console.log("Il vincitore e il computer!");
+}
